@@ -1,10 +1,45 @@
-![image](../images/confluent-logo-300-2.png)
+# HW Report
 
-# Overview
+Deploy the demo in Docker
 
-This example shows how KSQL can be used to process a stream of click data, aggregate and filter it, and join to information about the users.
-Visualisation of the results is provided by Grafana, on top of data streamed to Elasticsearch. 
+![set-up](screenshots/1-set-up.png)
 
-# Documentation
+Create the necessary connectors by running a script
 
-You can find the documentation for running this example and its accompanying tutorial at [https://docs.confluent.io/platform/current/tutorials/examples/clickstream/docs/index.html](https://docs.confluent.io/platform/current/tutorials/examples/clickstream/docs/index.html?utm_source=github&utm_medium=demo&utm_campaign=ch.examples_type.community_content.clickstream)
+![create-connectors](screenshots/2-create-connectors.png)
+
+Sample data from generators
+
+![data-sample](screenshots/3-data-sample.png)
+
+See the connectors on WEB UI at http://localhost:9021/
+
+![web_ui](screenshots/4-web-ui-connectors.png)
+
+Create streams by running a script
+
+![create_streams](screenshots/5-create-streams.png)
+
+View the flow in WEB UI
+
+![streams_flow](screenshots/6-streams-flow.png)
+
+Query some stream to verify the data
+
+![query](screenshots/7-query-to-verify.png)
+
+Send data to Grafana and create a dashboard via scripts
+
+![to_grafana](screenshots/8-send-to-grafana.png)
+
+View the dashboard in Grafana at http://localhost:3000/
+
+![query](screenshots/9-dashboard.png)
+
+See that additional Elasticsearch connectors have been created
+
+![new_connectors](screenshots/10-new-connectors.png)
+
+Emulate sessionizing the data and view the effects in Grafana
+
+![sessionized](screenshots/11-sessionized.png)
